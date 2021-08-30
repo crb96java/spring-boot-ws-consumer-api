@@ -1,0 +1,96 @@
+https://www.concretepage.com/spring-boot/spring-boot-soap-web-service-example#Client
+https://github.com/Java-Techie-jt/spring-boot-soap-ws-consumer
+
+producer api name: spring-boot-ws-producer-api
+consumer api name: spring-boot-ws-consumer-api
+
+get articles by id request: 
+GET: http://localhost:8087/get/3
+
+response: 
+{
+    "articleInfo": {
+        "articleId": 3,
+        "title": "ABC",
+        "category": "C"
+    }
+}
+
+-----------------
+DELETE: http://localhost:8087/delete/3
+
+response:
+{
+    "serviceStatus": {
+        "statusCode": "SUCCESS",
+        "message": "Content Deleted Successfully"
+    }
+}
+
+-----------------
+PUT: http://localhost:8087/update
+request body:
+{
+	"articleId" : 5,
+	"title" : "Java Version 8",
+	"category" : "IT"
+}
+
+response:
+{
+    "serviceStatus": {
+        "statusCode": "SUCCESS",
+        "message": "Content Updated Successfully"
+    }
+}
+
+-----------------
+GET: http://localhost:8087/get-all-articles
+
+response: 
+{
+    "articleInfo": [
+        {
+            "articleId": 5,
+            "title": "Java Version 8",
+            "category": "IT"
+        },
+        {
+            "articleId": 6,
+            "title": "Neon",
+            "category": "Z"
+        },
+        {
+            "articleId": 7,
+            "title": "Microservice",
+            "category": "Microservice"
+        },
+        {
+            "articleId": 8,
+            "title": ".NET",
+            "category": ".NET"
+        }
+    ]
+}
+
+-----------------
+
+POST: http://localhost:8087/create-article
+request body:
+{
+	"title" : "Paython",
+	"category" : "Software"
+}
+
+response:
+{
+    "serviceStatus": {
+        "statusCode": "SUCCESS",
+        "message": "Content Added Successfully"
+    },
+    "articleInfo": {
+        "articleId": 9,
+        "title": "Paython",
+        "category": "Paython"
+    }
+}

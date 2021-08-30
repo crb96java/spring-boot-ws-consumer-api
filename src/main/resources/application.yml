@@ -1,0 +1,9 @@
+server:
+  port: 8087
+
+spring:
+  ws:
+    consumer:
+      binding:
+        api:
+          articlebyid: http://localhost:8085/soapws/getArticleByIdRequest
